@@ -502,7 +502,8 @@ func (a *App) GetMarketplacePlugins(filter *model.MarketplacePluginFilter) ([]*m
 
 		result = append(result, &model.MarketplacePlugin{
 			BaseMarketplacePlugin: &model.BaseMarketplacePlugin{
-				Manifest: plugin.Manifest,
+				HomepageURL: plugin.Manifest.HomepageURL,
+				Manifest:    plugin.Manifest,
 			},
 			InstalledVersion: plugin.Manifest.Version,
 		})
